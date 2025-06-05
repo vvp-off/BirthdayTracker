@@ -8,20 +8,95 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Add Birthday-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BirthdayTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GfH-OC-wgh">
+                                <rect key="frame" x="20" y="100" width="100" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="1R9-7L-KVk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Surname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="No1-0z-uzX">
+                                <rect key="frame" x="20" y="170" width="100" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="MEQ-lP-Aaz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LtT-cx-dwC">
+                                <rect key="frame" x="20" y="250" width="100" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="vY9-yU-A0V"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Eoz-46-OEm">
+                                <rect key="frame" x="20" y="130" width="335" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="K77-fz-5Nn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YtG-8W-1YI">
+                                <rect key="frame" x="20" y="200" width="335" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="uH9-zb-Abt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GsO-gA-S8c">
+                                <rect key="frame" x="0.0" y="280" width="393" height="0.0"/>
+                                <date key="date" timeIntervalSinceReferenceDate="-177134399.19881594">
+                                    <!--1995-05-22 20:00:00 +0000-->
+                                </date>
+                            </datePicker>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Eoz-46-OEm" firstAttribute="leading" secondItem="No1-0z-uzX" secondAttribute="leading" id="3mN-KO-wet"/>
+                            <constraint firstItem="Eoz-46-OEm" firstAttribute="trailing" secondItem="YtG-8W-1YI" secondAttribute="trailing" id="3ux-g0-A9O"/>
+                            <constraint firstItem="LtT-cx-dwC" firstAttribute="top" secondItem="YtG-8W-1YI" secondAttribute="bottom" constant="16" id="Bhh-ZT-dh1"/>
+                            <constraint firstItem="GfH-OC-wgh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="BrT-c9-8yE"/>
+                            <constraint firstItem="GsO-gA-S8c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CQh-fc-ZJc"/>
+                            <constraint firstItem="YtG-8W-1YI" firstAttribute="top" secondItem="No1-0z-uzX" secondAttribute="bottom" constant="9" id="Erj-xS-ICD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GfH-OC-wgh" secondAttribute="trailing" constant="273" id="JNc-u1-4Ot"/>
+                            <constraint firstItem="No1-0z-uzX" firstAttribute="trailing" secondItem="LtT-cx-dwC" secondAttribute="trailing" id="P3h-Jt-v9a"/>
+                            <constraint firstItem="No1-0z-uzX" firstAttribute="leading" secondItem="YtG-8W-1YI" secondAttribute="leading" id="RGY-20-Hdk"/>
+                            <constraint firstItem="GfH-OC-wgh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="44" id="Thi-C1-DkA"/>
+                            <constraint firstItem="Eoz-46-OEm" firstAttribute="top" secondItem="GfH-OC-wgh" secondAttribute="bottom" constant="9" id="c1v-Yy-eaZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Eoz-46-OEm" secondAttribute="trailing" constant="38" id="f3B-V7-5g3"/>
+                            <constraint firstItem="YtG-8W-1YI" firstAttribute="leading" secondItem="LtT-cx-dwC" secondAttribute="leading" id="lxU-nR-oVq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GsO-gA-S8c" secondAttribute="bottom" constant="253" id="nHQ-jq-18r"/>
+                            <constraint firstItem="GfH-OC-wgh" firstAttribute="trailing" secondItem="No1-0z-uzX" secondAttribute="trailing" id="s8Z-kg-Np6"/>
+                            <constraint firstItem="GsO-gA-S8c" firstAttribute="top" secondItem="LtT-cx-dwC" secondAttribute="bottom" constant="9" id="stA-03-YI9"/>
+                            <constraint firstItem="No1-0z-uzX" firstAttribute="top" secondItem="Eoz-46-OEm" secondAttribute="bottom" constant="6" id="wFC-d4-UOd"/>
+                            <constraint firstItem="GfH-OC-wgh" firstAttribute="leading" secondItem="Eoz-46-OEm" secondAttribute="leading" id="znj-VJ-xGO"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Add Birthday" id="sOf-SZ-4eB">
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="fcd-oJ-cUN"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="67O-yL-B2f"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="932.06106870229007" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="1999.2366412213739" y="-2.1126760563380285"/>
         </scene>
         <!--Birthday-->
         <scene sceneID="icm-sr-PAQ">
@@ -46,7 +121,13 @@
                             <outlet property="delegate" destination="R96-Je-PtO" id="lRN-2I-WFX"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Birthday" id="MSG-4I-8Q0"/>
+                    <navigationItem key="navigationItem" title="Birthday" id="MSG-4I-8Q0">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="xST-mX-U31">
+                            <connections>
+                                <segue destination="lQ7-B7-Z1v" kind="presentation" id="aBh-TX-Thv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t9o-qb-88n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -69,6 +150,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ouc-sP-dvl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-698.47328244274809" y="-2.1126760563380285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Stq-lV-vxa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lQ7-B7-Z1v" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="x9p-G5-4wp">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="aY4-ZN-r7w"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hXi-M1-YZZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1072.5190839694656" y="-2.1126760563380285"/>
         </scene>
     </scenes>
     <resources>
