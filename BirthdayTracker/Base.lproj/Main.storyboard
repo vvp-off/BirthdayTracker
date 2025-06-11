@@ -11,7 +11,7 @@
         <!--Add Birthday-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BirthdayTracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="AddBirthdayViewController" customModule="BirthdayTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,8 +59,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GsO-gA-S8c">
-                                <rect key="frame" x="0.0" y="280" width="393" height="0.0"/>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GsO-gA-S8c">
+                                <rect key="frame" x="0.0" y="280" width="393" height="250"/>
                                 <date key="date" timeIntervalSinceReferenceDate="-177134399.19881594">
                                     <!--1995-05-22 20:00:00 +0000-->
                                 </date>
@@ -69,30 +69,47 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="GsO-gA-S8c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3FH-WC-qR5"/>
                             <constraint firstItem="Eoz-46-OEm" firstAttribute="leading" secondItem="No1-0z-uzX" secondAttribute="leading" id="3mN-KO-wet"/>
                             <constraint firstItem="Eoz-46-OEm" firstAttribute="trailing" secondItem="YtG-8W-1YI" secondAttribute="trailing" id="3ux-g0-A9O"/>
                             <constraint firstItem="LtT-cx-dwC" firstAttribute="top" secondItem="YtG-8W-1YI" secondAttribute="bottom" constant="16" id="Bhh-ZT-dh1"/>
                             <constraint firstItem="GfH-OC-wgh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="BrT-c9-8yE"/>
-                            <constraint firstItem="GsO-gA-S8c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CQh-fc-ZJc"/>
                             <constraint firstItem="YtG-8W-1YI" firstAttribute="top" secondItem="No1-0z-uzX" secondAttribute="bottom" constant="9" id="Erj-xS-ICD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GfH-OC-wgh" secondAttribute="trailing" constant="273" id="JNc-u1-4Ot"/>
                             <constraint firstItem="No1-0z-uzX" firstAttribute="trailing" secondItem="LtT-cx-dwC" secondAttribute="trailing" id="P3h-Jt-v9a"/>
                             <constraint firstItem="No1-0z-uzX" firstAttribute="leading" secondItem="YtG-8W-1YI" secondAttribute="leading" id="RGY-20-Hdk"/>
                             <constraint firstItem="GfH-OC-wgh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="44" id="Thi-C1-DkA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GsO-gA-S8c" secondAttribute="bottom" constant="253" id="V6K-pp-R96"/>
+                            <constraint firstItem="GsO-gA-S8c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bPC-rq-3y7"/>
+                            <constraint firstItem="GsO-gA-S8c" firstAttribute="top" secondItem="LtT-cx-dwC" secondAttribute="bottom" constant="9" id="bnI-kz-5XR"/>
                             <constraint firstItem="Eoz-46-OEm" firstAttribute="top" secondItem="GfH-OC-wgh" secondAttribute="bottom" constant="9" id="c1v-Yy-eaZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Eoz-46-OEm" secondAttribute="trailing" constant="38" id="f3B-V7-5g3"/>
                             <constraint firstItem="YtG-8W-1YI" firstAttribute="leading" secondItem="LtT-cx-dwC" secondAttribute="leading" id="lxU-nR-oVq"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GsO-gA-S8c" secondAttribute="bottom" constant="253" id="nHQ-jq-18r"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GsO-gA-S8c" secondAttribute="bottom" constant="253" id="rrU-3W-qfd"/>
                             <constraint firstItem="GfH-OC-wgh" firstAttribute="trailing" secondItem="No1-0z-uzX" secondAttribute="trailing" id="s8Z-kg-Np6"/>
-                            <constraint firstItem="GsO-gA-S8c" firstAttribute="top" secondItem="LtT-cx-dwC" secondAttribute="bottom" constant="9" id="stA-03-YI9"/>
+                            <constraint firstItem="GsO-gA-S8c" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="vaD-o8-JSt"/>
                             <constraint firstItem="No1-0z-uzX" firstAttribute="top" secondItem="Eoz-46-OEm" secondAttribute="bottom" constant="6" id="wFC-d4-UOd"/>
+                            <constraint firstItem="GsO-gA-S8c" firstAttribute="top" secondItem="LtT-cx-dwC" secondAttribute="bottom" constant="9" id="wFk-aP-h9T"/>
                             <constraint firstItem="GfH-OC-wgh" firstAttribute="leading" secondItem="Eoz-46-OEm" secondAttribute="leading" id="znj-VJ-xGO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add Birthday" id="sOf-SZ-4eB">
-                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="fcd-oJ-cUN"/>
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="67O-yL-B2f"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="fcd-oJ-cUN">
+                            <connections>
+                                <action selector="cancelTappedWith_sender:" destination="BYZ-38-t0r" id="6AY-mN-bL1"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="67O-yL-B2f">
+                            <connections>
+                                <action selector="saveTappedWith_sender:" destination="BYZ-38-t0r" id="GAI-vP-eol"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="birthdatePicker" destination="GsO-gA-S8c" id="17z-T4-fLM"/>
+                        <outlet property="firstNameTextField" destination="Eoz-46-OEm" id="c8U-L2-fXE"/>
+                        <outlet property="lastNameTextField" destination="YtG-8W-1YI" id="Gqh-Eo-7xZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -107,7 +124,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Q6w-lS-6fc">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="5" id="Q6w-lS-6fc">
                                 <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Q6w-lS-6fc" id="S2g-AH-CQQ">
@@ -122,7 +139,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Birthday" id="MSG-4I-8Q0">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="xST-mX-U31">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="xST-mX-U31">
                             <connections>
                                 <segue destination="lQ7-B7-Z1v" kind="presentation" id="aBh-TX-Thv"/>
                             </connections>
