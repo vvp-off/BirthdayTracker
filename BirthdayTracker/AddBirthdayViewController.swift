@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import UserNotifications
 
 
 class AddBirthdayViewController: UIViewController {
@@ -22,12 +23,8 @@ class AddBirthdayViewController: UIViewController {
         birthdatePicker.maximumDate = Date()
     }
     @IBAction func saveTapped(_sender: UIBarButtonItem) {
-        print("Нажата кнопка сохранения")
-        
         let firstName = firstNameTextField.text ?? ""
         let lastName = lastNameTextField.text ?? ""
-        print("Меня зовут \(firstName) \(lastName)")
-        
         let birthdate = birthdatePicker.date
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -45,6 +42,19 @@ class AddBirthdayViewController: UIViewController {
         
         do {
             try context.save()
+            let message = "Сегодня \(firstName) \(lastName) празднует день рождения!"
+            let content = UNMutableNotificationContent()
+            content.body = message
+            content.sound = .defaultCritical
+            var dateComponents = Calendar.current.dateComponents([.month,.day], from: birthdate)
+            dateComponents.hour = 16
+            dateComponents.minute = 50
+            let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+            if let identifier = newBirthday.birthdayID {
+                let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+                let center = UNUserNotificationCenter.current()
+                center.add(request, withCompletionHandler: nil)
+            }
         }
         catch let error {
             print ("Не удалось сохранить из-за ошибки \(error).")
